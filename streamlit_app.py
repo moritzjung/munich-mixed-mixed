@@ -6,12 +6,13 @@ import pandas as pd
 
 from utils import get_team_picture, get_sport_picture
 
+# Set the page config for Streamlit
+st.set_page_config(page_title="Munich Mixed Mixed Games", layout="centered")
+
 # Connect to Google Sheet
 conn = st.connection("gsheets", type=GSheetsConnection)
 df = conn.read()
 
-# Set the page config for Streamlit
-st.set_page_config(page_title="Munich Mixed Mixed Games", layout="centered")
 
 # --- Header ---
 st.title("🏟️ Munich Mixed Mixed Games 🏟️")
